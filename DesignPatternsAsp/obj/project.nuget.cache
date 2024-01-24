@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "k8Skxo+MQ8SluUxb6s6jV3IyLmaaNi6dutfzRrYfc0p/jLoo6DYHhyGcB0dR/jxQXB8CqaYJkHwW+lQrUUNZsQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Martin Aguirre\\OneDrive\\Documentos\\Programación\\Udemy - HdeL\\DesignPatterns\\DesignPatternsAsp\\DesignPatternsAsp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Martin Aguirre\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Martin Aguirre\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
