@@ -1,9 +1,27 @@
-﻿using DesignPatterns.Singleton;
+﻿
+// SINGLETON
 
-var singleton = Singleton.Instance;
+//using DesignPatterns.Singleton;
 
-var log = Log.Instance;
-var log2 = Log.Instance;
+//var singleton = Singleton.Instance;
 
-Console.WriteLine(log == log2);
-Console.ReadLine();
+//var log = Log.Instance;
+//var log2 = Log.Instance;
+
+//Console.WriteLine(log == log2);
+//Console.ReadLine();
+
+//-----------------------------------------------------------------
+
+// FACTORY
+
+using DesignPatterns.Factory;
+
+SaleFactory storeSaleFactory = new StoreSaleFactory(5);
+SaleFactory internetSaleFactory = new InternetSaleFactory(5);
+
+ISale storeSale = storeSaleFactory.GetSale();
+ISale internetSale = internetSaleFactory.GetSale();
+
+storeSale.Sell(10);
+internetSale.Sell(10);

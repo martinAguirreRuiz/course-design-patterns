@@ -1,5 +1,7 @@
 using DesignPatternsAsp.Configuration;
 using Microsoft.Extensions.Configuration;
+using System.Reflection.Metadata.Ecma335;
+using Tools.Earn;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,8 +9,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 //Adding a Path
 builder.Services.Configure<MyConfig>(builder.Configuration.GetSection("MyConfig"));
+
+//Dependency Injection into Factory Method
+
+builder.Services.AddScoped((x) => new LocalEarnFactory(builder.Configuration.GetSection("MyConfig").GetValue<decimal>("LocalPercentage")));
+
+builder.Services.AddScoped((x) => new ForeignEarnFactory(builder.Configuration.GetSection("MyConfig").GetValue<decimal>("ForeignPercentage"),
+    builder.Configuration.GetSection("MyConfig").GetValue<decimal>("Extra")));
 
 var app = builder.Build();
 

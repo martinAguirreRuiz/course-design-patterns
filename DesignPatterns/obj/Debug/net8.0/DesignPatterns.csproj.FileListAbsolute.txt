@@ -12,3 +12,4 @@ C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Udemy - HdeL\DesignPat
 C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Udemy - HdeL\DesignPatterns\DesignPatterns\obj\Debug\net8.0\DesignPatterns.pdb
 C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Udemy - HdeL\DesignPatterns\DesignPatterns\obj\Debug\net8.0\DesignPatterns.genruntimeconfig.cache
 C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Udemy - HdeL\DesignPatterns\DesignPatterns\obj\Debug\net8.0\ref\DesignPatterns.dll
+C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Udemy - HdeL\DesignPatterns\DesignPatterns\obj\Debug\net8.0\DesignPatterns.sourcelink.json

@@ -18,13 +18,13 @@ namespace DesignPatternsAsp.Controllers
 
         public IActionResult Index()
         {
-            Log.GetInstance("log.txt").Save("Entro a index");
+            Log.GetInstance(_config.Value.PathLog).Save("Entro a index");
             return View();
         }
 
         public IActionResult Privacy()
         {
-            Log.GetInstance("log.txt").Save("Entro a privacy");
+            Log.GetInstance(_config.Value.PathLog).Save("Entro a privacy");
             return View();
         }
 

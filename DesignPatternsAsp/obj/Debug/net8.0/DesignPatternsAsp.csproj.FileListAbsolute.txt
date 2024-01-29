@@ -32,3 +32,4 @@ C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Udemy - HdeL\DesignPat
 C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Udemy - HdeL\DesignPatterns\DesignPatternsAsp\obj\Debug\net8.0\DesignPatternsAsp.pdb
 C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Udemy - HdeL\DesignPatterns\DesignPatternsAsp\obj\Debug\net8.0\DesignPatternsAsp.genruntimeconfig.cache
 C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Udemy - HdeL\DesignPatterns\DesignPatternsAsp\obj\Debug\net8.0\ref\DesignPatternsAsp.dll
+C:\Users\Martin Aguirre\OneDrive\Documentos\Programación\Udemy - HdeL\DesignPatterns\DesignPatternsAsp\obj\Debug\net8.0\DesignPatternsAsp.sourcelink.json
