@@ -1,4 +1,7 @@
+using DesignPatterns.Models.Data;
+using DesignPatterns.Repository;
 using DesignPatternsAsp.Configuration;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Reflection.Metadata.Ecma335;
 using Tools.Earn;
@@ -19,6 +22,15 @@ builder.Services.AddScoped((x) => new LocalEarnFactory(builder.Configuration.Get
 
 builder.Services.AddScoped((x) => new ForeignEarnFactory(builder.Configuration.GetSection("MyConfig").GetValue<decimal>("ForeignPercentage"),
     builder.Configuration.GetSection("MyConfig").GetValue<decimal>("Extra")));
+
+// Adding ConnectionString
+builder.Services.AddDbContext<BeerContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Connection"));
+});
+
+//Adding Repository
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();
 
