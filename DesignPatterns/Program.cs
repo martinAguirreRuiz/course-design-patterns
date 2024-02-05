@@ -2,6 +2,8 @@
 using DesignPatterns.Factory;
 using DesignPatterns.Models;
 using DesignPatterns.Repository;
+using DesignPatterns.Strategy;
+using DesignPatterns.UnitOfWork;
 public class Program
 {
     public static void Main(string[] args)
@@ -53,21 +55,59 @@ public class Program
         //    }
         //}
 
-        using (var context = new BeerContext())
-        {
-            var beerRepository = new Repository<Beer>(context);
-            var brandRepository = new Repository<Brand>(context);
+        //using (var context = new BeerContext())
+        //{
+        //    var beerRepository = new Repository<Beer>(context);
+        //    var brandRepository = new Repository<Brand>(context);
 
-            var brand = new Brand() { Name = "Marca-X" };
+        //    var brand = new Brand() { Name = "Marca-X" };
 
-            beerRepository.Delete(3);
-            beerRepository.Save();
+        //    beerRepository.Delete(3);
+        //    beerRepository.Save();
 
-            brandRepository.Add(brand);
-            brandRepository.Save();
+        //    brandRepository.Add(brand);
+        //    brandRepository.Save();
 
 
-        }
+        //}
 
+        //-----------------------------------------------------------------
+
+        // UNIT OF WORK
+
+        //using (var context = new BeerContext())
+        //{
+        //    var unitOfWork = new UnitOfWork(context);
+
+        //    var beers = unitOfWork.Beers;
+        //    var beer = new Beer
+        //    {
+        //        Name = "Test",
+        //        Style = "Marca-Test"
+        //    };
+
+        //    beers.Add(beer);
+
+        //    var brands = unitOfWork.Brands;
+        //    var brand = new Brand
+        //    {
+        //        Name = "Test-Brand",
+        //    };
+
+        //    brands.Add(brand);
+
+        //    unitOfWork.Save();
+        //}
+
+        //-----------------------------------------------------------------
+
+        // STRATEGY
+
+        var context = new Context(new CarStrategy());
+        context.Run();
+        context.Strategy = new MotoStrategy();
+        context.Run();
+        context.Strategy = new BikeStrategy();
+        context.Run();
     }
 }

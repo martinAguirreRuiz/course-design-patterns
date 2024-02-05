@@ -32,6 +32,9 @@ builder.Services.AddDbContext<BeerContext>(options =>
 //Adding Repository
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
+//Adding Unit Of Work
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

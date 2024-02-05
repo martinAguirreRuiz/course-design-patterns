@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Repository
 {
-    internal interface IRepository<TEntity>
+    public interface IRepository<TEntity>
     {
         public IEnumerable<TEntity> Get();
         public TEntity GetById(int id);
