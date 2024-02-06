@@ -1,4 +1,5 @@
 ﻿//using DesignPatterns.Singleton;
+using DesignPatterns.Builder;
 using DesignPatterns.Factory;
 using DesignPatterns.Models;
 using DesignPatterns.Repository;
@@ -103,11 +104,23 @@ public class Program
 
         // STRATEGY
 
-        var context = new Context(new CarStrategy());
-        context.Run();
-        context.Strategy = new MotoStrategy();
-        context.Run();
-        context.Strategy = new BikeStrategy();
-        context.Run();
+        //var context = new Context(new CarStrategy());
+        //context.Run();
+        //context.Strategy = new MotoStrategy();
+        //context.Run();
+        //context.Strategy = new BikeStrategy();
+        //context.Run();
+
+        //-----------------------------------------------------------------
+
+        // BUILDER
+
+        var alcoholDrinkBuilder = new PreparedAlcoholDrinkConcreteBuilder();
+        var barmanDirector = new BarmanDirector(alcoholDrinkBuilder);
+
+        barmanDirector.PrepareMargarita();
+
+        var preparedDrink = alcoholDrinkBuilder.GetPreparedDrink();
+        Console.WriteLine(preparedDrink.Result);
     }
 }

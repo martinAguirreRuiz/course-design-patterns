@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Reflection.Metadata.Ecma335;
 using Tools.Earn;
+using Tools.Generator;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,9 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 //Adding Unit Of Work
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+//Adding Concrete Builder from BuilderPattern
+builder.Services.AddScoped < GeneratorConcreteBuilder>();
 
 var app = builder.Build();
 
